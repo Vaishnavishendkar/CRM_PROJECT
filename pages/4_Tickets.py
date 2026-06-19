@@ -8,7 +8,7 @@ st.set_page_config(page_title="Tickets", page_icon="🎫")
 
 st.title("🎫 Ticket Management")
 
-BASE_URL = st.secrets.get("API_BASE_URL", "http://localhost:8000")
+BASE_URL = st.secrets.get("API_BASE_URL")
 headers = get_headers()
 role = st.session_state.get("user_role", "").lower()
 

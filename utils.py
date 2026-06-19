@@ -3,7 +3,7 @@ import requests
 import jwt
 from typing import Optional, Dict, Any
 
-API_BASE_URL = st.secrets.get("API_BASE_URL", "http://localhost:8000")
+API_BASE_URL = st.secrets.get("API_BASE_URL")
 
 def api_call(method: str, endpoint: str, json_data: Optional[Dict] = None) -> Any:
     """Make API call to FastAPI backend"""

@@ -13,7 +13,7 @@ name = st.session_state.get("user_name", "User")
 
 st.markdown(f"### 👋 Welcome back, {name}!")
 
-BASE_URL = st.secrets.get("API_BASE_URL", "http://localhost:8000")
+BASE_URL = st.secrets.get("API_BASE_URL")
 headers = get_headers()
 
 try:

@@ -70,7 +70,7 @@ if st.session_state.get("is_authenticated", False):
         from utils.auth import get_headers
         import requests
         
-        BASE_URL = st.secrets.get("API_BASE_URL", "https://crm-project-lz8l.onrender.com")
+        BASE_URL = st.secrets.get("API_BASE_URL")
         headers = get_headers()
         
         response = requests.get(f"{BASE_URL}/user/profile", headers=headers)

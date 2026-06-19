@@ -27,7 +27,7 @@ with st.form("register_form", clear_on_submit=True):
             st.error("Password must be at least 8 characters long!")
         else:
             try:
-                BASE_URL = st.secrets.get("API_BASE_URL", "http://localhost:8000")
+                BASE_URL = st.secrets.get("API_BASE_URL")
                 response = requests.post(
                     f"{BASE_URL}/register",
                     json={

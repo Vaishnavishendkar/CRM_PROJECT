@@ -8,7 +8,7 @@ st.set_page_config(page_title="Profile", page_icon="👤")
 
 st.title("👤 My Profile")
 
-BASE_URL = st.secrets.get("API_BASE_URL", "http://localhost:8000")
+BASE_URL = st.secrets.get("API_BASE_URL")
 headers = get_headers()
 
 try:

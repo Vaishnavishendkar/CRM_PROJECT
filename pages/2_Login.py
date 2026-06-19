@@ -35,7 +35,7 @@ with st.form("login_form", clear_on_submit=True):
             st.error("Please fill in all fields!")
         else:
             try:
-                BASE_URL = st.secrets.get("API_BASE_URL", "http://localhost:8000")
+                BASE_URL = st.secrets.get("API_BASE_URL")
                 
                 with st.spinner("Logging in..."):
                     response = requests.post(
