@@ -16,13 +16,13 @@ if st.session_state.get("is_authenticated", False):
     st.stop()
 
 # Get JWT secret with proper handling
-JWT_SECRET = os.getenv("JWT_SECRET_KEY", "").strip()
+JWT_SECRET = os.getenv("JWT_SECRET_KEY").strip()
 JWT_ALGORITHM = os.getenv("JWT_ALGORITHM", "HS256").strip()
 
 # Debug info (remove after testing)
 if not JWT_SECRET:
     st.warning("⚠️ JWT_SECRET_KEY not found in .env file. Using fallback.")
-    JWT_SECRET = "your-secret-key-please-change-in-production"
+    JWT_SECRET = "JWT_SECRET_KEY"  
 
 with st.form("login_form", clear_on_submit=True):
     email = st.text_input("Email", placeholder="Enter your email address")
